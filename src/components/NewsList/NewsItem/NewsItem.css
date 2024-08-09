@@ -1,0 +1,16 @@
+.news-content__item {
+    display: block;
+}
+
+.news-content__link {
+    color: black;
+    display: flex;
+    position: relative;
+}
+
+.news-content__icon {
+    width: 1em;
+    position: absolute;
+    top: 6px;
+    left: -17px;
+}
