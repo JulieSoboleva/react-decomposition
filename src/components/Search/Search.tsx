@@ -1,4 +1,8 @@
+
+import Navigator from './Navigator/Navigator';
+import SearchForm from './SearchForm/SearchForm';
 import './Search.css';
+import SearchAdvice from './SearchAdvice/SearchAdvice';
 
 interface SearchItem {
     searchСategories: string[],
@@ -9,7 +13,7 @@ interface SearchItem {
 }
 
 /** 
- * Отрисовка элементов поиска: навигация по страницам, поле ввода запроса и подсказка строки поиска 
+ * Отрисовка элементов поиска подсказка строки поиска 
  */
 export default function Search(props: SearchItem) {
     const {
@@ -22,39 +26,11 @@ export default function Search(props: SearchItem) {
 
     return (
         <div className='search'>
-            <nav className='search-nav'>
-                <ul className='search-nav-menu'>
-                    {searchСategories.map((category, index) => {
-                        return (
-                            <li className='search-nav-menu__item active' key={index}>
-                                <a href='#0' className='search-nav-menu__item-link'>
-                                    {category}
-                                </a>
-                            </li>
-                        );
-                    })}
-                    <li className='search-nav-menu__item'>
-                        <a href='#0' className='search-nav-menu__item-link'>
-                            ещё
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <Navigator categories={searchСategories}/>
 
-            <form className='search-bar'>
-                <img src={searchLogo} alt='logo' className='search-bar-logo'/>
-                <input className='search-bar-input' id='search-bar-input' type='text' name='search-bar-input' required />
-                <button className='search-bar-button' type='submit'>
-                    {searchBtnName}
-                </button>
-            </form>
+            <SearchForm searchLogo={searchLogo} searchBtnName={searchBtnName}/>
 
-            <p className='search-advice'>
-                {searchAdvice}
-                <span className='search-advice__example'>
-                    &nbsp;{searchExample}
-                </span>
-            </p>
+            <SearchAdvice searchAdvice={searchAdvice} searchExample={searchExample}/>
         </div>
     );
 }

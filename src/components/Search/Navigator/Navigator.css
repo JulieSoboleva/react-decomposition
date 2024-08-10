@@ -1,0 +1,18 @@
+.search-nav {
+    display: flex;
+}
+
+.search-nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.search-nav-menu__item {
+    margin-right: 18px;
+}
+
+.search-nav-menu__item .search-nav-menu__item-link {
+    font-weight: 400;
+
+    color: #0054b9;
+}

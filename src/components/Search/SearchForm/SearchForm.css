@@ -1,0 +1,30 @@
+.search-bar {
+    display: flex;
+    margin-top: 7px;
+    margin-left: -135px;
+}
+
+.search-bar-logo {
+    margin-right: 20px;
+    width: 100px;
+}
+
+.search-bar-label::first-letter {
+    color: #ff0000;
+}
+
+.search-bar-input {
+    width: 100%;
+    border: 2px solid #ffcc00;
+}
+
+.search-bar-button {
+    padding: 5px 20px 5px 15px;
+
+    background-color: #ffcc00;
+    border: none;
+
+    cursor: pointer;
+
+    clip-path: polygon(90% 0, 100% 50%, 100% 50%, 90% 100%, 0 100%, 0 50%, 0 0);
+}

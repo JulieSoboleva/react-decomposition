@@ -8,24 +8,3 @@
 
     font-size: 13.5px;
 }
-
-.exchange-rates__item {
-    margin-right: 12px;
-}
-
-.exchange-rates__item-link {
-    font-weight: 700;
-    text-transform: uppercase;
-
-    color: #000000;
-}
-
-.exchange-rates__item-rate {
-    margin-left: 6px;
-
-    color: #90919d;
-}
-
-.exchange-rates__more-rates {
-    color: #90919d;
-}

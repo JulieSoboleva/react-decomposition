@@ -1,4 +1,5 @@
 import { CurrencyRateItem } from '../../data/currencyRates'
+import RateItem from './RateItem/RateItem';
 import './ExchangeRates.css';
 
 interface CurrencyRatesList {
@@ -14,14 +15,11 @@ export default function ExchangeRates({ currencyRates }: CurrencyRatesList) {
             <ul className='exchange-rates'>
                 {currencyRates.map((item, index) => {
                     return (
-                        <li className='exchange-rates__item' key={index}>
-                            <a href='#0' className='exchange-rates__item-link'>
-                                {item.currency}
-                            </a>
-                            <span className='exchange-rates__item-rate'>
-                                {item.rate}
-                            </span>
-                        </li>
+                        <RateItem 
+                            key={index}
+                            currency={item.currency}
+                            rate={item.rate}
+                        />
                     );
                 })}
             </ul>
